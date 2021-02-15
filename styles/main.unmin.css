@@ -4,6 +4,7 @@
   --color-main: #086701;
   --height-footer: 80px;
   --height-header: 50px;
+  --spacing: 40px;
 }
 
 html {
@@ -24,7 +25,7 @@ body, h1, h2, h3, h4, p, blockquote, ul, ol, li, a, button {
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 header {
@@ -43,22 +44,22 @@ header {
   height: var(--height-footer);
 }
 
-.section--center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .home-section {
   position: absolute;
   top: var(--height-header);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
   width: 100%;
-  min-height: calc(100vh - var(--height-header));
+  height: calc(100% - var(--height-header));
+  overflow: scroll;
   transition: left .5s;
+  transition-timing-function: ease-in-out;
 }
-
-.home-section:first-of-type {
+.home-section:first-of-type,
+.shift .home-section:not(:first-of-type) {
   left: 0;
 }
 .home-section:not(:first-of-type) {
@@ -67,18 +68,17 @@ header {
 .shift .home-section:first-of-type {
   left: -100%;
 }
-.shift .home-section:not(:first-of-type) {
-  left: 0;
-}
-
-.home-section.blue {
-  background: rgb(199, 199, 255);
-}
 
 .content {
   display: flex;
   flex-direction: column;
+  width: calc(100% - 450px);
+  min-height: 100%;
+}
+.content--centered {
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 /* typography */
@@ -135,7 +135,7 @@ button {
 
 .home-footer--toggle {
   position: relative;
-  cursor: pointer;  
+  cursor: pointer;
 }
 .home-footer--toggle + .home-footer--toggle {
   margin-left: 10px;
@@ -159,16 +159,19 @@ button {
   right: 10px;
   transform: rotate(10deg);
 }
+.home-footer--toggle.active {
+  cursor: default;
+}
 
 /* issue */
 
 .issue--date {
-  margin-bottom: 50px;
+  margin-bottom: var(--spacing);
   font-style: italic;
 }
 
 .issue--author-list {
-  margin-bottom: 50px;
+  margin-bottom: var(--spacing);
   max-width: 900px;
   text-align: center;
 }

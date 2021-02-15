@@ -1,27 +1,40 @@
 function initHome() {
   const bodyElm = document.querySelector('body'),
+    sectionElms = document.querySelectorAll('section'),
     toggles = document.querySelectorAll('.home-footer--toggle');
 
+    // remove active class from all toggles
   function clearToggles() {
-    for (const toggle of toggles) {
-      toggle.classList.remove('active');
-    }
+    for (const toggle of toggles) toggle.classList.remove('active');
   }
 
   for (const toggle of toggles) {
     const { shift } = toggle.dataset;
 
     toggle.addEventListener('click', () => {
-      clearToggles();
-      toggle.classList.add('active');
+      // trigger only if toggle is not active
+      if (!toggle.classList.contains('active')) {
+        clearToggles();
+        // add active class
+        toggle.classList.add('active');
 
-      if (shift) {
-        bodyElm.classList.add('shift');
+        // shift logic
+        if (shift) {
+          bodyElm.classList.add('shift');
+        }
+        else {
+          bodyElm.classList.remove('shift');
+        }
+
+        // scroll section after animation is finished
+        setTimeout(() => {
+          for (const sectionElm of sectionElms) {
+            sectionElm.scrollTop = 0;
+          }
+        }, 600);
       }
-      else {
-        bodyElm.classList.remove('shift');
-      }
-      
+
+      // disable focus
       toggle.blur();
     });
   }
