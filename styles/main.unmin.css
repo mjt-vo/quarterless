@@ -1,10 +1,13 @@
 :root {
   --color-bg: #f3f9f5;
-  --color-highlight: #fcba3e;
+  --color-highlight: #ffc65c;
   --color-main: #086701;
+  --color-yellow: #fcf8cb;
   --height-footer: 80px;
-  --height-header: 50px;
+  --height-header: 40px;
   --spacing: 40px;
+  --spacing-m: 60px;
+  --spacing-l: 100px;
 }
 
 html {
@@ -68,11 +71,15 @@ header {
 .shift .home-section:first-of-type {
   left: -100%;
 }
+.home-section--feed .content > *:last-child {
+  margin-top: var(--spacing-l);
+  padding-bottom: 200px;
+}
 
 .content {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 450px);
+  width: calc(100% - 600px);
   min-height: 100%;
 }
 .content--centered {
@@ -89,6 +96,12 @@ h2 {
 }
 
 h3 {
+  margin-bottom: 10px;
+  font-size: 3.75rem;
+  font-weight: 500;
+}
+
+h4 {
   margin-bottom: 20px;
   padding: 5px 10px;
   border: 1px dashed;
@@ -98,13 +111,20 @@ h3 {
 p, li {
   line-height: 3.3rem;
 }
+p {
+  margin-bottom: 10px;
+}
+
 a {
   position: relative;
   font-size: inherit;
   font-weight: inherit;
-  transition: color .25s;
+  transition: color .2s;
 }
-a:before {
+a:hover {
+  color: #000;
+}
+a:not(.card--link):before {
   content: ' ';
   position: absolute;
   z-index: -1; 
@@ -113,14 +133,19 @@ a:before {
   height: 20px;
   width: calc(100% + 20px);
   transform: rotate(-2deg);
-  transition: background-color 0.05s;
-  background: rgb(252, 248, 203);
+  transition: background-color 0.2s;
+  background: var(--color-yellow);
 }
-a:hover:before {  
+a:not(.card--link):hover:before {  
   background: var(--color-highlight);
 }
-*:nth-child(even) > a:before {
-  transform: rotate(5deg);
+*:not(p):nth-child(even) > a:not(.card--link):before {
+  transform: rotate(3deg);
+}
+p > a:not(.card--link):before {
+  left: -3px;
+  width: calc(100% + 6px);
+  transform: rotate(0deg);
 }
 
 button {
@@ -145,7 +170,7 @@ button {
   content: ' ';
   position: absolute;
   z-index: -1; 
-  left: -10px;
+  left: -15px;
   bottom: 0px;
   height: 20px;
   width: 20px;
@@ -154,7 +179,7 @@ button {
 }
 .home-footer--toggle + .home-footer--toggle.active:before,
 .home-footer--toggle + .home-footer--toggle:hover:before {
-  top: -10px;
+  top: -13px;
   left: auto;
   right: 10px;
   transform: rotate(10deg);
@@ -177,4 +202,87 @@ button {
 }
 .issue--author-list--item {
   list-style: none;
+}
+
+/* card */
+.card {
+  margin: var(--spacing-l) 0;
+}
+
+.card--link {
+  display: block;
+  transition: color .2s;
+}
+
+.card--link:hover * {
+  color: #000;
+}
+.card--link:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card--image {
+  float: right;
+  margin: 0 0 20px 20px;
+  width: 400px;
+  transition: opacity .2s;
+}
+.card--link:hover .card--image {
+  opacity: .95;
+}
+
+.card--title {
+  position: relative;
+}
+.card--title:before {
+  content: ' ';
+  position: absolute;
+  z-index: -1; 
+  left: -50px;
+  top: 40px;
+  height: 20px;
+  width: calc(100% + 100px);
+  transform: rotate(5deg);
+  transition: background-color 0.2s;
+  background: var(--color-yellow);
+}
+.card--link:hover .card--title:before {
+  background: var(--color-highlight);
+}
+
+.card:nth-child(3n+2) .card--title:before {
+  top: 0px;
+  left: -85px;
+  width: calc(100% + 50px);
+  transform: rotate(-6deg);
+}
+
+.card:nth-child(3n+3) .card--title:before {
+  top: 50px;
+  left: -35px;
+  transform: rotate(2deg);
+}
+
+.card--link:after {
+  display: block;
+  overflow: hidden;
+  content: "\2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192";
+  margin-top: var(--spacing);
+  width: 100%;
+  letter-spacing: 15px;
+  color: pink;
+  transition: color 0.2s;
+}
+.card--link:hover:after {
+  color: var(--color-highlight);
+}
+
+p.card--date {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.card--author {
+  font-style: italic;
 }
