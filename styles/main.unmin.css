@@ -130,7 +130,7 @@ h4 {
 }
 
 p, li {
-  line-height: 3.3rem;
+  line-height: 3.2rem;
 }
 p {
   margin-bottom: 10px;
@@ -227,6 +227,7 @@ button {
 
 /* card */
 .card {
+  position: relative;
   margin: var(--spacing-l) 0;
   width: 100%;
 }
@@ -263,7 +264,7 @@ button {
   position: absolute;
   z-index: -1; 
   left: -50px;
-  top: 35px;
+  top: 30px;
   height: 20px;
   width: calc(100% + 100px);
   transform: rotate(1deg);
@@ -275,14 +276,14 @@ button {
 }
 
 .card:nth-of-type(3n+2) .card--title:before {
-  top: -17px;
-  left: -55px;
+  top: 10px;
+  left: -35px;
   width: calc(100% + 50px);
-  transform: rotate(-6deg);
+  transform: rotate(-3deg);
 }
 
 .card:nth-of-type(3n+3) .card--title:before {
-  top: 10px;
+  top: 40px;
   left: -35px;
   width: calc(100% + 75px);
   transform: rotate(3deg);
@@ -302,10 +303,36 @@ button {
   color: var(--color-highlight);
 }
 
-p.card--date {
-  font-size: 1.5rem;
+.card--date {
+  position: absolute;
+  left: -40px;
+  top: -50px;
+  display: inline-block;
   margin-bottom: 0;
+  border-bottom: 1px dashed;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  text-align: right;
+  transform: rotate(-2deg);
 }
 .card--author {
   font-style: italic;
+}
+.card--column {
+  margin-bottom: 20px;
+  letter-spacing: 7px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.card--tags {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+.card--tags span {
+  display: inline-block;
+  margin-right: 10px;
+  border: 1px solid;
+  padding: 2px 4px;
 }
