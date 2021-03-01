@@ -5,6 +5,7 @@
   --color-main: #086701;
   /* --color-yellow: #fcf8cb; */
   --color-yellow: #F8F84D;
+  --color-pink: #ad39ff;
   --height-footer: 80px;
   --height-header: 40px;
   --spacing: 40px;
@@ -194,7 +195,7 @@ button {
   bottom: 0px;
   height: 20px;
   width: 20px;
-  background: pink;
+  background: var(--color-pink);
   transform: rotate(-20deg);
 }
 .home-footer--toggle + .home-footer--toggle.active:before,
@@ -307,7 +308,7 @@ button {
   margin-top: var(--spacing);
   width: 100%;
   letter-spacing: 15px;
-  color: pink;
+  color: var(--color-pink);
   transition: color 0.2s;
 }
 .card--link:hover:after {
