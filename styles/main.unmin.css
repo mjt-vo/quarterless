@@ -8,6 +8,7 @@
   --spacing: 40px;
   --spacing-m: 60px;
   --spacing-l: 100px;
+  --spacing-xl: 180px;
 }
 
 html {
@@ -50,6 +51,7 @@ header {
 .home-footer {
   position: fixed;
   bottom: 0;
+  right: 0;
   display: inline-flex;
   align-items: center;
   padding: 0 30px;
@@ -80,7 +82,7 @@ header {
 .shift .home-section:first-of-type {
   left: -100%;
 }
-.home-section--feed h1 {
+.content h1 {
   display: inline-block;
   flex-basis: 0;
   margin-top: var(--spacing-m);
@@ -93,15 +95,8 @@ header {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-bottom: var(--spacing);
   width: calc(100% - 600px);
-  min-height: 100%;
-}
-.content--centered {
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -112,7 +107,8 @@ h1 {
 }
 
 h2 {
-  font-size: 7rem;
+  margin-top: var(--spacing);
+  font-size: 5rem;
   font-weight: 500;
 }
 
@@ -123,6 +119,7 @@ h3 {
 }
 
 h4 {
+  display: inline-block;
   margin-bottom: 20px;
   padding: 5px 10px;
   border: 1px dashed;
@@ -210,7 +207,9 @@ button {
 }
 
 /* issue */
-
+.issue + .card {
+  margin-top: 150px;
+}
 .issue--date {
   margin-bottom: var(--spacing);
   font-style: italic;
@@ -219,17 +218,27 @@ button {
 .issue--author-list {
   margin-bottom: var(--spacing);
   max-width: 900px;
-  text-align: center;
+  list-style: none;
+  counter-reset: author-counter;
 }
 .issue--author-list--item {
-  list-style: none;
+  counter-increment: author-counter;
+}
+.issue--author-list--item:before {
+  content: "0" counter(author-counter) ". ";
 }
 
 /* card */
 .card {
   position: relative;
-  margin: var(--spacing-l) 0;
+  margin: var(--spacing-xl) 0;
   width: 100%;
+  text-align: left;
+}
+.card:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .card--link {
@@ -305,7 +314,7 @@ button {
 
 .card--date {
   position: absolute;
-  left: -40px;
+  left: -60px;
   top: -50px;
   display: inline-block;
   margin-bottom: 0;
