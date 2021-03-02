@@ -3,7 +3,7 @@
   --color-main: #065c00;
   --color-link-hover: #92ff88;
   --color-link: #caffc5;
-  --color-highlight: #fea9fe;
+  --color-highlight: rgb(255, 211, 130);
   --height-footer: 80px;
   --height-header: 40px;
   --spacing: 40px;
