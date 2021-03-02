@@ -1,8 +1,8 @@
 :root {
   --color-bg: #f9f8f3;
   --color-main: #065c00;
-  --color-link-bg-hover: #79bd72;
-  --color-link-bg: #c1debe;
+  --color-link-bg-hover: #afcdac;
+  --color-link-bg: #d5e3d3;
   --color-highlight: #5b8dc9;
   --height-footer: 80px;
   --height-header: 40px;
@@ -153,10 +153,10 @@ a:not(.card--link):before {
   position: absolute;
   z-index: -1; 
   left: -10px;
-  top: 30%;
+  top: 15%;
   height: 20px;
   width: calc(100% + 20px);
-  transform: rotate(-2deg);
+  transform: rotate(-1deg);
   transition: background-color 0.2s;
   background: var(--color-link-bg);
 }
@@ -164,7 +164,7 @@ a:not(.card--link):hover:before {
   background: var(--color-link-bg-hover);
 }
 *:not(p):nth-child(even) > a:not(.card--link):before {
-  transform: rotate(3deg);
+  transform: rotate(2deg);
 }
 p > a:not(.card--link):before {
   left: -3px;
@@ -266,25 +266,12 @@ button {
   float: right;
   margin: 0 0 20px 20px;
   width: 400px;
-  transition: opacity .2s;
+  transition: opacity .2s, filter .19s;
 }
 .card--link:hover .card--image {
   opacity: .95;
   filter: hue-rotate(130deg);
 }
-/* .card--link:hover .card--image:before {
-  display: block;
-  content: "\2639";
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: blue;
-  width: 100%;
-  height: 100%;
-  font-size: 50rem;
-  line-height: 25rem;
-  filter: hue-rotate(-130deg);
-} */
 
 .card--title {
   position: relative;
