@@ -3,7 +3,7 @@
   --color-main: #065c00;
   --color-link-hover: #92ff88;
   --color-link: #caffc5;
-  --color-highlight: rgb(255, 211, 130);
+  --color-highlight: #afbef4;
   --height-footer: 80px;
   --height-header: 40px;
   --spacing: 40px;
@@ -17,6 +17,7 @@ html {
   font-size: 10px;
   color: var(--color-main);
   background: var(--color-bg);
+  transition: color .2s;
 }
 
 /* reset */
@@ -70,7 +71,7 @@ header {
   width: 100%;
   height: calc(100% - var(--height-header));
   overflow: scroll;
-  transition: left .5s;
+  transition: left .4s;
   transition-timing-function: ease-in-out;
 }
 .home-section:first-of-type,
@@ -260,10 +261,11 @@ button {
   float: right;
   margin: 0 0 20px 20px;
   width: 400px;
-  transition: opacity .2s;
+  transition: opacity .2s, filter .2s;
 }
 .card--link:hover .card--image {
   opacity: .9;
+  filter: hue-rotate(130deg);
 }
 
 .card--title {

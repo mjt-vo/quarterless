@@ -31,7 +31,7 @@ function initHome() {
           for (const sectionElm of sectionElms) {
             sectionElm.scrollTop = 0;
           }
-        }, 600);
+        }, 400);
       }
 
       // disable focus
