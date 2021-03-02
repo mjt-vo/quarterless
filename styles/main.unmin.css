@@ -3,7 +3,7 @@
   --color-main: #055000;
   --color-link-hover: #92ff88;
   --color-link: #caffc5;
-  --color-pink: #ddaeff;
+  --color-highlight: #fea9fe;
   --height-footer: 80px;
   --height-header: 40px;
   --spacing: 40px;
@@ -193,7 +193,7 @@ button {
   bottom: 0px;
   height: 20px;
   width: 20px;
-  background: var(--color-pink);
+  background: var(--color-highlight);
   transform: rotate(-20deg);
 }
 .home-footer--toggle + .home-footer--toggle.active:before,
@@ -306,7 +306,7 @@ button {
   margin-top: 20px;
   width: 100%;
   letter-spacing: 15px;
-  color: var(--color-pink);
+  color: var(--color-highlight);
   transition: color 0.2s;
 }
 .card--link:hover:after {
@@ -320,7 +320,7 @@ button {
   display: inline-block;
   margin-bottom: 0;
   border-bottom: 2px dashed;
-  border-color: var(--color-pink);
+  border-color: var(--color-highlight);
   font-size: 1.5rem;
   line-height: 1.7rem;
   text-align: right;
