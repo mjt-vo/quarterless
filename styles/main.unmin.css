@@ -1,6 +1,6 @@
 :root {
   --color-bg: #f9f8f3;
-  --color-main: #055000;
+  --color-main: #065c00;
   --color-link-hover: #92ff88;
   --color-link: #caffc5;
   --color-highlight: #fea9fe;
@@ -306,11 +306,6 @@ button {
   margin-top: 20px;
   width: 100%;
   letter-spacing: 15px;
-  color: var(--color-highlight);
-  transition: color 0.2s;
-}
-.card--link:hover:after {
-  color: var(--color-link-hover);
 }
 
 .card--date {
@@ -320,14 +315,10 @@ button {
   display: inline-block;
   margin-bottom: 0;
   border-bottom: 2px dashed;
-  border-color: var(--color-highlight);
   font-size: 1.5rem;
   line-height: 1.7rem;
   text-align: right;
   transform: rotate(-2deg);
-}
-.card--link:hover .card--date {
-  border-color: var(--color-link-hover);
 }
 .card--author {
   font-style: italic;
