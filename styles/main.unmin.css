@@ -1,9 +1,9 @@
 :root {
   --color-bg: #f9f8f3;
-  --color-highlight: #0ca900;
-  --color-main: #086701;
-  --color-yellow: #0ca900;
-  --color-pink: pink;
+  --color-main: #055000;
+  --color-link-hover: #92ff88;
+  --color-link: #caffc5;
+  --color-pink: #ddaeff;
   --height-footer: 80px;
   --height-header: 40px;
   --spacing: 40px;
@@ -153,10 +153,10 @@ a:not(.card--link):before {
   width: calc(100% + 20px);
   transform: rotate(-2deg);
   transition: background-color 0.2s;
-  background: var(--color-yellow);
+  background: var(--color-link);
 }
 a:not(.card--link):hover:before {  
-  background: var(--color-highlight);
+  background: var(--color-link-hover);
 }
 *:not(p):nth-child(even) > a:not(.card--link):before {
   transform: rotate(3deg);
@@ -279,10 +279,10 @@ button {
   width: calc(100% + 100px);
   transform: rotate(1deg);
   transition: background-color 0.2s;
-  background: var(--color-yellow);
+  background: var(--color-link);
 }
 .card--link:hover .card--title:before {
-  background: var(--color-highlight);
+  background: var(--color-link-hover);
 }
 
 .card:nth-of-type(3n+2) .card--title:before {
@@ -303,27 +303,31 @@ button {
   display: block;
   overflow: hidden;
   content: "\2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192";
-  margin-top: var(--spacing);
+  margin-top: 20px;
   width: 100%;
   letter-spacing: 15px;
   color: var(--color-pink);
   transition: color 0.2s;
 }
 .card--link:hover:after {
-  color: var(--color-highlight);
+  color: var(--color-link-hover);
 }
 
 .card--date {
   position: absolute;
-  left: -60px;
-  top: -50px;
+  left: -50px;
+  top: -40px;
   display: inline-block;
   margin-bottom: 0;
-  border-bottom: 1px dashed;
+  border-bottom: 2px dashed;
+  border-color: var(--color-pink);
   font-size: 1.5rem;
   line-height: 1.7rem;
   text-align: right;
   transform: rotate(-2deg);
+}
+.card--link:hover .card--date {
+  border-color: var(--color-link-hover);
 }
 .card--author {
   font-style: italic;
