@@ -1,11 +1,9 @@
 :root {
-  --color-bg: #f3f9f5;
-  /* --color-highlight: #ffc65c; */
-  --color-highlight: #0627f2;
+  --color-bg: #f9f8f3;
+  --color-highlight: #0ca900;
   --color-main: #086701;
-  /* --color-yellow: #fcf8cb; */
-  --color-yellow: #F8F84D;
-  --color-pink: #ad39ff;
+  --color-yellow: #0ca900;
+  --color-pink: pink;
   --height-footer: 80px;
   --height-header: 40px;
   --spacing: 40px;
