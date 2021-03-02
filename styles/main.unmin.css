@@ -1,9 +1,9 @@
 :root {
   --color-bg: #f9f8f3;
   --color-main: #065c00;
-  --color-link-hover: #92ff88;
-  --color-link: #caffc5;
-  --color-highlight: #afbef4;
+  --color-link-bg-hover: #79bd72;
+  --color-link-bg: #c1debe;
+  --color-highlight: #5b8dc9;
   --height-footer: 80px;
   --height-header: 40px;
   --spacing: 40px;
@@ -18,6 +18,10 @@ html {
   color: var(--color-main);
   background: var(--color-bg);
   transition: color .2s;
+}
+
+img {
+  width: 100%;
 }
 
 /* reset */
@@ -154,10 +158,10 @@ a:not(.card--link):before {
   width: calc(100% + 20px);
   transform: rotate(-2deg);
   transition: background-color 0.2s;
-  background: var(--color-link);
+  background: var(--color-link-bg);
 }
 a:not(.card--link):hover:before {  
-  background: var(--color-link-hover);
+  background: var(--color-link-bg-hover);
 }
 *:not(p):nth-child(even) > a:not(.card--link):before {
   transform: rotate(3deg);
@@ -199,7 +203,7 @@ button {
 }
 .home-footer--toggle + .home-footer--toggle.active:before,
 .home-footer--toggle + .home-footer--toggle:hover:before {
-  top: -13px;
+  top: -15px;
   left: auto;
   right: 10px;
   transform: rotate(10deg);
@@ -258,15 +262,29 @@ button {
 }
 
 .card--image {
+  position: relative;
   float: right;
   margin: 0 0 20px 20px;
   width: 400px;
-  transition: opacity .2s, filter .2s;
+  transition: opacity .2s;
 }
 .card--link:hover .card--image {
   opacity: .9;
   filter: hue-rotate(130deg);
 }
+/* .card--link:hover .card--image:before {
+  display: block;
+  content: "\2639";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: blue;
+  width: 100%;
+  height: 100%;
+  font-size: 50rem;
+  line-height: 25rem;
+  filter: hue-rotate(-130deg);
+} */
 
 .card--title {
   position: relative;
@@ -281,10 +299,10 @@ button {
   width: calc(100% + 100px);
   transform: rotate(1deg);
   transition: background-color 0.2s;
-  background: var(--color-link);
+  background: var(--color-link-bg);
 }
 .card--link:hover .card--title:before {
-  background: var(--color-link-hover);
+  background: var(--color-link-bg-hover);
 }
 
 .card:nth-of-type(3n+2) .card--title:before {
@@ -308,6 +326,7 @@ button {
   margin-top: 20px;
   width: 100%;
   letter-spacing: 15px;
+  color: var(--color-link-bg-hover);
 }
 
 .card--date {
@@ -317,6 +336,7 @@ button {
   display: inline-block;
   margin-bottom: 0;
   border-bottom: 2px dashed;
+  border-color: var(--color-link-bg-hover);
   font-size: 1.5rem;
   line-height: 1.7rem;
   text-align: right;
