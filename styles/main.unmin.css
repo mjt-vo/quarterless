@@ -269,7 +269,7 @@ button {
   transition: opacity .2s;
 }
 .card--link:hover .card--image {
-  opacity: .9;
+  opacity: .95;
   filter: hue-rotate(130deg);
 }
 /* .card--link:hover .card--image:before {
