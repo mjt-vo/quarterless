@@ -371,6 +371,9 @@ button {
     width: calc(100% - 40px);
     max-width: 500px;
   }
+  .card {
+    margin: var(--spacing-l) 0;
+  }
   .card--link:after {
     content: "\2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192";
   }
