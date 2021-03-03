@@ -102,7 +102,7 @@ header {
 
 .content {
   padding-bottom: var(--spacing);
-  width: calc(100% - 600px);
+  width: 800px;
   text-align: center;
 }
 
@@ -349,4 +349,59 @@ button {
   margin-right: 10px;
   border: 1px solid;
   padding: 2px 4px;
+}
+
+@media (max-width: 1399px) {
+  .content {
+    width: 600px;
+  }
+  .card--link:after {
+    content: "\2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192";
+  }
+  .card--image {
+    width: 300px;
+  }
+}
+
+@media (max-width: 999px) {
+  html {
+    font-size: 9px;
+  }
+  .content {
+    width: calc(100% - 40px);
+    max-width: 500px;
+  }
+  .card--link:after {
+    content: "\2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192 \2192";
+  }
+  .card--image {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+  .card--date {
+    left: 0;
+  }
+  .card--title:before,
+  .card:nth-of-type(3n+2) .card--title:before,
+  .card:nth-of-type(3n+3) .card--title:before {
+    display: none;
+  }
+  .home-footer {
+    justify-content: center;
+    width: 100%;
+    border-top: 1px dashed;
+    padding: 0;
+    height: 50px;
+    background: var(--color-bg);
+  
+  }
+  .home-footer--toggle {
+    height: 35px;
+    border: 1px solid;
+  }
+  .home-footer--toggle.active:before,
+  .home-footer--toggle:hover:before {
+    display: none;
+  }
 }
