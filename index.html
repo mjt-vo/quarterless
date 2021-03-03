@@ -4,128 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/main.unmin.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <script language="javascript" type="text/javascript" src="./scripts/home.js"></script>
+    <script language="javascript" type="text/javascript" src="./scripts/nav.js"></script>
   </head>
   <body>
-    <header>
-      <span>TQR</span>
+    <header class="">
+      <menu>
+        <span class="nav__toggle" tabindex="1">MENU</span>
+        <span>TQR</span>
+      </menu>
+      <nav>
+        <ul class="nav__list">
+          <li class="nav__item nav__item--label">The Review</li>
+          <li class="nav__item"><a href="#">Volume #15 (NEW)</a></li>
+          <li class="nav__item"><a href="#">Volume #14</a></li>
+          <li class="nav__item"><a href="#">Volume #13</a></li>
+          <li class="nav__item"><a href="#">All Issues</a></li>
+        </ul>
+        <ul class="nav__list">
+          <li class="nav__item nav__item--label">Columns</li>
+          <li class="nav__item"><a href="#">Show Abysmal</a></li>
+          <li class="nav__item"><a href="#">Rituals</a></li>
+          <li class="nav__item"><a href="#">Torment</a></li>
+          <li class="nav__item"><a href="#">All Columns</a></li>
+        </ul>
+        <ul class="nav__list">
+          <li class="nav__item nav__item--label">Info</li>
+          <li class="nav__item"><a href="#">Artists</a></li>
+          <li class="nav__item"><a href="#">About</a></li>
+          <li class="nav__item"><a href="#">How To Submit</a></li>
+          <li class="nav__item"><a href="#">Contact</a></li>
+          <li class="nav__item"><a href="#">Donate</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="home-section issue">
+    <section class="home__section issue">
       <div class="content">
         <h1>The Quarterless Review</h1>
 
         <div class="issue">
           <h2><a href="#">Volume #15</a></h2>
-          <p class="issue--date">Monday, January 25th, 2021</p>
+          <p class="issue__date">Monday, January 25th, 2021</p>
           <h4>Contributing Artists</h4>
-          <ol class="issue--author-list">
-            <li class="issue--author-list--item"><a href="#">Adrienne Herr</a></li>
-            <li class="issue--author-list--item"><a href="#">Mark Hernandez</a></li>
-            <li class="issue--author-list--item"><a href="#">Sennah Yee</a></li>
-            <li class="issue--author-list--item"><a href="#">Stevie Belchak</a></li>
+          <ol class="issue__author-list">
+            <li class="issue__author-list__item"><a href="#">Adrienne Herr</a></li>
+            <li class="issue__author-list__item"><a href="#">Mark Hernandez</a></li>
+            <li class="issue__author-list__item"><a href="#">Sennah Yee</a></li>
+            <li class="issue__author-list__item"><a href="#">Stevie Belchak</a></li>
           </ol>
           <p><a href="#">Community Resources</a></p>
         </div>
 
         <article class="card">
-          <a class="card--link" href="#">
-            <div class="card--image">
+          <a class="card__link" href="#">
+            <div class="card__image">
               <img src="images/content-1.png"/>
             </div>
-            <p class="card--date">01.</p>
-            <h3 class="card--title">Sounds Like That Pond is Right Here in the Room</h3>
-            <p class="card--author">Adrienne Herr</p>
-            <p class="card--description">I can tell when I read it yeah what kind of distance from yourself you should keep yeah Jacky lived in Galveston...</p>
-            <p class="card--tags"><span>poetry</span><span>audio</span></p>
+            <p class="card__date">01.</p>
+            <h3 class="card__title">Sounds Like That Pond is Right Here in the Room</h3>
+            <p class="card__author">Adrienne Herr</p>
+            <p class="card__description">I can tell when I read it yeah what kind of distance from yourself you should keep yeah Jacky lived in Galveston...</p>
+            <p class="card__tags"><span>poetry</span><span>audio</span></p>
           </a>
         </article>
 
         <article class="card">
-          <a class="card--link" href="#">
-            <div class="card--image">
+          <a class="card__link" href="#">
+            <div class="card__image">
               <img src="images/content-2.png"/>
             </div>
-            <p class="card--date">02.</p>
-            <h3 class="card--title">Greens and Blues</h3>
-            <p class="card--author">Mark Hernandez</p>
-            <p class="card--description">Here is the garden I tend to. While perched in my local community garden, watering and clipping, I reflect on the other spaces I have tended to and cultivated...</p>
-            <p class="card--tags"><span>poetry</span><span>audio</span></p>
+            <p class="card__date">02.</p>
+            <h3 class="card__title">Greens and Blues</h3>
+            <p class="card__author">Mark Hernandez</p>
+            <p class="card__description">Here is the garden I tend to. While perched in my local community garden, watering and clipping, I reflect on the other spaces I have tended to and cultivated...</p>
+            <p class="card__tags"><span>poetry</span><span>audio</span></p>
           </a>
         </article>
 
         <article class="card">
-          <a class="card--link" href="#">
-            <div class="card--image">
+          <a class="card__link" href="#">
+            <div class="card__image">
               <img src="images/content-3.png"/>
             </div>
-            <p class="card--date">03.</p>
-            <h3 class="card--title">Two Poems</h3>
-            <p class="card--author">Sennah Yee</p>
-            <p class="card--description">I have a note in my phone from Sept 12, 2017 that simply says “the back of her ears make me hysterical.” I knew those ears so well...</p>
-            <p class="card--tags"><span>poetry</span></p>
+            <p class="card__date">03.</p>
+            <h3 class="card__title">Two Poems</h3>
+            <p class="card__author">Sennah Yee</p>
+            <p class="card__description">I have a note in my phone from Sept 12, 2017 that simply says “the back of her ears make me hysterical.” I knew those ears so well...</p>
+            <p class="card__tags"><span>poetry</span></p>
           </a>
         </article>
 
         <article class="card">
-          <a class="card--link" href="#">
-            <div class="card--image">
+          <a class="card__link" href="#">
+            <div class="card__image">
               <img src="images/content-4.png"/>
             </div>
-            <p class="card--date">04.</p>
-            <h3 class="card--title">I Look So Tired Vacating My Tomb</h3>
-            <p class="card--author">Stevie Belchak</p>
-            <p class="card--description">a biorhythmic plume / in oversized / cotton / I rise / from the water / opposite / a livestream / watch a bead / of sweat / surface / refecting...</p>
-            <p class="card--tags"><span>poetry</span><span>audio</span></p>
+            <p class="card__date">04.</p>
+            <h3 class="card__title">I Look So Tired Vacating My Tomb</h3>
+            <p class="card__author">Stevie Belchak</p>
+            <p class="card__description">a biorhythmic plume / in oversized / cotton / I rise / from the water / opposite / a livestream / watch a bead / of sweat / surface / refecting...</p>
+            <p class="card__tags"><span>poetry</span><span>audio</span></p>
           </a>
         </article>
 
       </div>
     </section>
 
-    <section class="home-section home-section--feed">
+    <section class="home__section home__section--feed">
       <div class="content">
         <h1>Latest</h1>
 
         <article class="card">
-          <a class="card--link" href="#">
-            <p class="card--date">02-12-2021</p>
-            <p class="card--column">Rituals</p>
-            <h3 class="card--title">The Impossible Realm of Embodiment</h3>
-            <p class="card--author">Caitlyn Tella</p>
-            <p class="card--description">Haruna Lee speaks to making theater on Zoom and offers a writing exercise into psychic landscape...</p>
+          <a class="card__link" href="#">
+            <p class="card__date">02-12-2021</p>
+            <p class="card__column">Rituals</p>
+            <h3 class="card__title">The Impossible Realm of Embodiment</h3>
+            <p class="card__author">Caitlyn Tella</p>
+            <p class="card__description">Haruna Lee speaks to making theater on Zoom and offers a writing exercise into psychic landscape...</p>
           </a>
         </article>
 
         <article class="card">
-          <a class="card--link" href="#">
-            <p class="card--date">02-01-2021</p>
-            <p class="card--column">Shedding</p>
-            <h3 class="card--title">Kiko’s Jeepneys</h3>
-            <p class="card--author">Addison Bale</p>
-            <p class="card--description">On the work of Kiko Bordeos...</p>
+          <a class="card__link" href="#">
+            <p class="card__date">02-01-2021</p>
+            <p class="card__column">Shedding</p>
+            <h3 class="card__title">Kiko’s Jeepneys</h3>
+            <p class="card__author">Addison Bale</p>
+            <p class="card__description">On the work of Kiko Bordeos...</p>
           </a>
         </article>
 
         <article class="card">
-          <a class="card--link" href="#">
-            <p class="card--date">09-23-2020</p>
-            <p class="card--column">Show Abysmal</p>
-            <h3 class="card--title">A Blank Check for Unchecked Adolescence</h3>
-            <p class="card--author">Benjamin Shearn</p>
-            <p class="card--description">I knew it was risky. And almost certainly... illegal? Echoes of a past scandal concerning Pee-Wee Herman and a movie theater and Florida rattled around somewhere in the muddle of memory...</p>
+          <a class="card__link" href="#">
+            <p class="card__date">09-23-2020</p>
+            <p class="card__column">Show Abysmal</p>
+            <h3 class="card__title">A Blank Check for Unchecked Adolescence</h3>
+            <p class="card__author">Benjamin Shearn</p>
+            <p class="card__description">I knew it was risky. And almost certainly... illegal? Echoes of a past scandal concerning Pee-Wee Herman and a movie theater and Florida rattled around somewhere in the muddle of memory...</p>
           </a>
         </article>
 
         <article class="card">
-          <a class="card--link" href="#">
-            <p class="card--date">08-14-2020</p>
-            <p class="card--column">Show Abysmal</p>
-            <h3 class="card--title">Actors are Idols: James Spader</h3>
-            <p class="card--author">Amanda Kramer</p>
-            <p class="card--description">I’m often shit on for my Hollywood People-Worshipping of white straight men. It’s wildly out of fashion, I guess, especially for a woman like me...</p>
+          <a class="card__link" href="#">
+            <p class="card__date">08-14-2020</p>
+            <p class="card__column">Show Abysmal</p>
+            <h3 class="card__title">Actors are Idols: James Spader</h3>
+            <p class="card__author">Amanda Kramer</p>
+            <p class="card__description">I’m often shit on for my Hollywood People-Worshipping of white straight men. It’s wildly out of fashion, I guess, especially for a woman like me...</p>
           </a>
         </article>
 
@@ -134,13 +160,14 @@
       </div>
     </section>
 
-    <footer class="home-footer">
-      <button class="home-footer--toggle active">Review</button>
-      <button class="home-footer--toggle" data-shift=true>Latest</button>
+    <footer class="home__footer">
+      <button class="home__footer__toggle active" tabindex="1">Review</button>
+      <button class="home__footer__toggle" tabindex="1" data-shift=true>Latest</button>
     </footer>
 
     <script type="text/javascript">
       initHome();
+      initNav();
     </script>
   </body>
   </html>

@@ -1,7 +1,7 @@
 function initHome() {
   const bodyElm = document.querySelector('body'),
     sectionElms = document.querySelectorAll('section'),
-    toggles = document.querySelectorAll('.home-footer--toggle');
+    toggles = document.querySelectorAll('.home__footer__toggle');
 
     // remove active class from all toggles
   function clearToggles() {
