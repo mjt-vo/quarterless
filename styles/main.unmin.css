@@ -392,13 +392,13 @@ button {
     width: 100%;
     border-top: 1px dashed;
     padding: 0;
-    height: 50px;
+    height: 40px;
     background: var(--color-bg);
   
   }
   .home-footer--toggle {
-    height: 35px;
-    border: 1px solid;
+    height: 40px;
+    border: none;
   }
   .home-footer--toggle.active:before,
   .home-footer--toggle:hover:before {
